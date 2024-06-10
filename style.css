@@ -72,6 +72,7 @@
     margin-top: 60px; /* Adjust for fixed header */
     background: linear-gradient(120deg, #000000, #0d1a26, #1a0933);
     background-size: 600% 600%;
+    clip-path: ellipse(75% 100% at 50% 0%);
     animation: gradientAnimation 10s ease infinite;
   }
   
@@ -182,6 +183,7 @@
   }
   
   .glow-button {
+    --font-family:'Violet Sans', sans-serif;
     --button-background: #09041e;
     --button-color: #fff;
     --button-shadow: rgba(33, 4, 104, 0.2);
