@@ -69,6 +69,7 @@
     position: relative;
     text-align: center;
     color: #ffffff;
+    margin-top: 60px; /* Adjust for fixed header */
   }
   
   .lines {
@@ -78,16 +79,16 @@
     right: 0;
     height: 100%;
     margin: auto;
-    width: 90vw;
+    width: 100%;
     z-index: 0;
+    display: flex;
+    justify-content: space-between;
   }
   
   .line {
-    position: absolute;
+    position: relative;
     width: 1px;
     height: 100%;
-    top: 0;
-    left: 50%;
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
   }
@@ -106,20 +107,44 @@
     animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
   }
   
-  .line:nth-child(1) {
-    margin-left: -25%;
-  }
-  
   .line:nth-child(1)::after {
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
   
-  .line:nth-child(3) {
-    margin-left: 25%;
+  .line:nth-child(2)::after {
+    animation-delay: 1.5s;
   }
   
   .line:nth-child(3)::after {
+    animation-delay: 2s;
+  }
+  
+  .line:nth-child(4)::after {
     animation-delay: 2.5s;
+  }
+  
+  .line:nth-child(5)::after {
+    animation-delay: 3s;
+  }
+  
+  .line:nth-child(6)::after {
+    animation-delay: 3.5s;
+  }
+  
+  .line:nth-child(7)::after {
+    animation-delay: 4s;
+  }
+  
+  .line:nth-child(8)::after {
+    animation-delay: 4.5s;
+  }
+  
+  .line:nth-child(9)::after {
+    animation-delay: 5s;
+  }
+  
+  .line:nth-child(10)::after {
+    animation-delay: 5.5s;
   }
   
   @keyframes drop {
@@ -317,4 +342,5 @@
       font-size: 0.875rem;
     }
   }
+  
    
