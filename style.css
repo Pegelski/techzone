@@ -70,6 +70,15 @@
     text-align: center;
     color: #ffffff;
     margin-top: 60px; /* Adjust for fixed header */
+    background: linear-gradient(120deg, #000000, #0d1a26, #1a0933);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   
   .lines {
