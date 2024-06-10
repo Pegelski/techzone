@@ -1,12 +1,21 @@
-/* Basic Reset */
-* {
+/* Import the Violet Sans font */
+@font-face {
+    font-family: 'Violet Sans';
+    src: url('fonts/VioletSans-Regular.woff2') format('woff2'),
+         url('fonts/VioletSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Basic Reset */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Violet Sans', sans-serif;
     background-color: #121212;
     color: #ffffff;
     line-height: 1.6;
@@ -53,7 +62,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: url('hero-background.jpg') no-repeat center center/cover;
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
     position: relative;
     text-align: center;
     color: #ffffff;
@@ -110,6 +119,14 @@
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0; /* Initial state for reveal */
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .service.scrolled {
+    opacity: 1; /* Reveal state */
+    transform: translateY(0);
   }
   
   .service:hover {
@@ -125,6 +142,14 @@
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Initial state for reveal */
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  form.scrolled {
+    opacity: 1; /* Reveal state */
+    transform: translateY(0);
   }
   
   form label {
@@ -226,15 +251,5 @@
     form button {
       font-size: 0.875rem;
     }
-  }
-  .service, .form {
-    opacity: 0; /* Initial state for reveal */
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-  }
-  
-  .service.scrolled, .form.scrolled {
-    opacity: 1; /* Reveal state */
-    transform: translateY(0);
   }
   
